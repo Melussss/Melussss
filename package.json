@@ -1,0 +1,21 @@
+{
+  "name": "digitron-computers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "build": "node scripts/build-portable.mjs",
+    "dev": "wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "test": "node --test tests/store.test.mjs tests/http.test.mjs",
+    "db:local": "wrangler d1 execute DB --local --file=drizzle/0000_acoustic_spencer_smythe.sql",
+    "db:production": "wrangler d1 execute DB --remote --file=drizzle/0000_acoustic_spencer_smythe.sql"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.0",
+    "wrangler": "4.92.0"
+  }
+}

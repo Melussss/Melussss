@@ -1,0 +1,31 @@
+DIGITRON COMPUTERS — OPEN ON YOUR COMPUTER
+
+1. Extract the ENTIRE ZIP first (Extract All on Windows).
+2. Open the Digitron-Computers folder.
+3. Double-click index.html. Do not open templates/home.html.
+
+Keep the public folder and local-preview.js beside index.html.
+The public folder contains the CSS, images and server JavaScript.
+The root HTML pages are complete, styled pages for direct local browsing.
+Shop search, filters, product links, menus and slideshows work locally.
+Web fonts and Bootstrap icons use internet-hosted resources; an internet
+connection is required for those exact fonts/icons. Core styling is local.
+
+LOCAL PREVIEW LIMITATIONS
+Cart/wishlist storage, checkout, quote attachments, newsletter subscriptions
+and support submissions require the included JavaScript backend. The preview
+does not send or save these requests and displays a notice when attempted.
+Product stock and prices are sample catalog data, not live inventory.
+
+For the functional backend, follow README.md. Accounts/admin remain removed.
+All backend source and deployment files are included and kept separate from
+the local preview. No PHP server is needed for the preview.
+
+To regenerate the preview after source changes:
+  node scripts/build-local-preview.mjs
+
+VIDEO-FREE EDITION
+Video files and embedded video elements have been removed. Original sections,
+text, images, styles and backend files remain. Video areas use their existing
+backgrounds until replacement videos are chosen. Earlier downloaded ZIPs still
+contain the original videos.

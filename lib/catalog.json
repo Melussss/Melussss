@@ -1,0 +1,156 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "RTX 4070 Super",
+      "slug": "rtx-4070-super",
+      "price": 2799,
+      "priceCents": 279900,
+      "category": "graphics-cards",
+      "condition": "new",
+      "badge": "hot",
+      "image": "images/products/rtx-4070-super.png",
+      "brand": "NVIDIA",
+      "watts": 220,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 2,
+      "name": "Ryzen 7 7800X3D",
+      "slug": "ryzen-7-7800x3d",
+      "price": 1699,
+      "priceCents": 169900,
+      "category": "processors",
+      "condition": "new",
+      "badge": "bestseller",
+      "image": "images/products/ryzen-7-7800x3d.png",
+      "brand": "AMD",
+      "watts": 120,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 3,
+      "name": "DDR5 32GB 6000MHz",
+      "slug": "ddr5-32gb-6000mhz",
+      "price": 489,
+      "priceCents": 48900,
+      "category": "memory",
+      "condition": "new",
+      "badge": "",
+      "image": "images/products/ddr5-32gb.png",
+      "brand": "",
+      "watts": 0,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 4,
+      "name": "NVMe SSD 1TB Gen4",
+      "slug": "nvme-ssd-1tb-gen4",
+      "price": 299,
+      "priceCents": 29900,
+      "category": "storage",
+      "condition": "new",
+      "badge": "sale",
+      "image": "images/products/nvme-1tb.png",
+      "brand": "",
+      "watts": 0,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 5,
+      "name": "Used GTX 1660 Super",
+      "slug": "used-gtx-1660-super",
+      "price": 499,
+      "priceCents": 49900,
+      "category": "graphics-cards",
+      "condition": "used",
+      "badge": "used",
+      "image": "images/products/gtx-1660-super.png",
+      "brand": "NVIDIA",
+      "watts": 125,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 6,
+      "name": "750W Gold PSU",
+      "slug": "750w-gold-psu",
+      "price": 349,
+      "priceCents": 34900,
+      "category": "power-supply",
+      "condition": "new",
+      "badge": "",
+      "image": "images/products/psu-750w.png",
+      "brand": "",
+      "watts": 0,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 7,
+      "name": "Intel Core i9-14900K",
+      "slug": "intel-core-i9-14900k",
+      "price": 1899,
+      "priceCents": 189900,
+      "category": "processors",
+      "condition": "new",
+      "badge": "hot",
+      "image": "images/products/i9-14900k.png",
+      "brand": "Intel",
+      "watts": 125,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    },
+    {
+      "id": 8,
+      "name": "ASUS ROG Motherboard",
+      "slug": "asus-rog-motherboard",
+      "price": 899,
+      "priceCents": 89900,
+      "category": "motherboards",
+      "condition": "new",
+      "badge": "",
+      "image": "images/products/asus-rog-mobo.png",
+      "brand": "ASUS",
+      "watts": 0,
+      "stock": 10,
+      "description": "Contact Digitron for full specifications, compatibility and warranty details."
+    }
+  ],
+  "categories": [
+    {
+      "slug": "processors",
+      "name": "Processors",
+      "image": "images/categories/processors.png"
+    },
+    {
+      "slug": "graphics-cards",
+      "name": "Graphics Cards",
+      "image": "images/categories/gpu.png"
+    },
+    {
+      "slug": "memory",
+      "name": "Memory",
+      "image": "images/categories/ram.png"
+    },
+    {
+      "slug": "storage",
+      "name": "Storage",
+      "image": "images/categories/ssd.png"
+    },
+    {
+      "slug": "motherboards",
+      "name": "Motherboards",
+      "image": "images/categories/motherboards.png"
+    },
+    {
+      "slug": "power-supply",
+      "name": "Power Supplies",
+      "image": "images/categories/psu.png"
+    }
+  ]
+}
