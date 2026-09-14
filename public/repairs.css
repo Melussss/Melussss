@@ -412,8 +412,72 @@ textarea:focus-visible {
   background: linear-gradient(to bottom, rgba(32, 33, 36, 0.22), rgba(32, 33, 36, 0.42), rgba(32, 33, 36, 0.68)) !important;
 }
 
-.dc-orbit-category {
-  --orbit-color: #ffffff !important;
+/* Shop by Category: restore the original per-category coloured hover glows. */
+.dc-categories-section .dc-orbit-category[data-color="#00f0ff"] {
+  --orbit-color: #00f0ff !important;
+  --category-glow-rgb: 0, 240, 255;
+}
+
+.dc-categories-section .dc-orbit-category[data-color="#7000ff"] {
+  --orbit-color: #7000ff !important;
+  --category-glow-rgb: 112, 0, 255;
+}
+
+.dc-categories-section .dc-orbit-category[data-color="#00ff88"] {
+  --orbit-color: #00ff88 !important;
+  --category-glow-rgb: 0, 255, 136;
+}
+
+.dc-categories-section .dc-orbit-category[data-color="#ffaa00"] {
+  --orbit-color: #ffaa00 !important;
+  --category-glow-rgb: 255, 170, 0;
+}
+
+.dc-categories-section .dc-orbit-category[data-color="#ff2d55"] {
+  --orbit-color: #ff2d55 !important;
+  --category-glow-rgb: 255, 45, 85;
+}
+
+.dc-categories-section .dc-orbit-category[data-color="#38bdf8"] {
+  --orbit-color: #38bdf8 !important;
+  --category-glow-rgb: 56, 189, 248;
+}
+
+.dc-categories-section .dc-orbit-glow {
+  background: transparent !important;
+  opacity: 0 !important;
+  transform: scale(0.9);
+  filter: blur(24px) !important;
+  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease !important;
+}
+
+.dc-categories-section .dc-orbit-category:hover .dc-orbit-glow,
+.dc-categories-section .dc-orbit-category:focus-visible .dc-orbit-glow {
+  background: rgb(var(--category-glow-rgb)) !important;
+  opacity: 0.28 !important;
+  transform: scale(1.5) !important;
+  box-shadow: 0 0 52px 18px rgba(var(--category-glow-rgb), 0.42) !important;
+}
+
+.dc-categories-section .dc-orbit-category:hover .dc-orbit-ring,
+.dc-categories-section .dc-orbit-category:focus-visible .dc-orbit-ring {
+  border-color: rgba(var(--category-glow-rgb), 0.62) !important;
+  box-shadow: 0 0 24px rgba(var(--category-glow-rgb), 0.42) !important;
+}
+
+.dc-categories-section .dc-orbit-category:hover .dc-orbit-circle,
+.dc-categories-section .dc-orbit-category:focus-visible .dc-orbit-circle {
+  border-color: rgb(var(--category-glow-rgb)) !important;
+  box-shadow: 0 0 0 1px rgba(var(--category-glow-rgb), 0.9),
+              0 0 34px rgba(var(--category-glow-rgb), 0.72),
+              0 0 68px rgba(var(--category-glow-rgb), 0.28),
+              0 20px 40px -10px rgba(0, 0, 0, 0.55) !important;
+}
+
+.dc-categories-section .dc-orbit-category:hover h3,
+.dc-categories-section .dc-orbit-category:focus-visible h3 {
+  color: rgb(var(--category-glow-rgb)) !important;
+  text-shadow: 0 0 18px rgba(var(--category-glow-rgb), 0.68);
 }
 
 .wish-button {
