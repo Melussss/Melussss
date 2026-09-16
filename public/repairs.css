@@ -1959,7 +1959,7 @@ footer ul a {
 }
 
 #catHero .catHeroHeadOverlay {
-  top: 26px;
+  top: 50px;
   right: auto;
   left: 50%;
   width: min(100%, 1280px);
@@ -2054,7 +2054,7 @@ footer ul a {
 }
 
 #catHero .catHeroNav {
-  left: calc(var(--zone-inline) + 74px);
+  left: calc(var(--zone-inline) + 37px);
   bottom: 24px;
   height: 42px;
   align-items: center;
