@@ -757,26 +757,19 @@
                     <div class="text-gray-500 text-sm italic text-center py-10">Select components to start building...</div>
                 </div>
 
-                <div class="mb-6">
-                    <div class="flex justify-between text-xs uppercase tracking-widest mb-2">
-                        <span class="text-gray-400">Build Selection</span>
-                        <span class="text-brand-accent font-bold" id="fps-score">0 selected</span>
-                    </div>
-                    <div class="w-full bg-gray-800 rounded-full h-2 overflow-hidden">
-                        <div id="perf-bar" class="bg-gradient-to-r from-brand-secondary to-brand-accent h-2 rounded-full w-0 transition-all duration-500"></div>
-                    </div>
+                <div class="builder-summary-metrics">
+                    <div class="builder-summary-metric"><span><i class="bi bi-check2-square" aria-hidden="true"></i> Selected parts</span><strong id="fps-score">0 selected</strong></div>
+                    <div class="builder-summary-metric"><span><i class="bi bi-lightning-charge" aria-hidden="true"></i> Rated power</span><strong><span id="wattage">0</span>W</strong></div>
                 </div>
 
-                <div class="flex justify-between items-center mb-6 p-3 bg-white/5 rounded-lg">
-                    <div class="flex items-center gap-2 text-sm text-gray-300">
-                        <i class="bi bi-lightning-charge-fill text-yellow-400"></i> CPU / GPU rated power
-                    </div>
-                    <div class="font-bold text-white"><span id="wattage">0</span>W</div>
+                <div class="builder-selection-progress">
+                    <div><span>Build progress</span><small>Core components</small></div>
+                    <div class="builder-progress-track"><div id="perf-bar" class="w-0 transition-all duration-500"></div></div>
                 </div>
 
-                <div class="flex justify-between items-end mb-6">
-                    <span class="text-gray-400">Total Price</span>
-                    <span class="text-3xl font-display font-bold text-white">AED <span id="total-price">0</span></span>
+                <div class="builder-total-panel">
+                    <span>Estimated total<small>Selected components</small></span>
+                    <strong>AED <span id="total-price">0</span></strong>
                 </div>
 
                 <button
