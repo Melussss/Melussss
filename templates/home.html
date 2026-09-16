@@ -753,8 +753,22 @@
                     <div><small>LIVE BUILD</small><h3>Build Summary</h3></div>
                 </div>
 
-                <div id="build-list" class="space-y-3 mb-6 min-h-[150px]">
-                    <div class="text-gray-500 text-sm italic text-center py-10">Select components to start building...</div>
+                <div id="build-list" class="builder-part-slots mb-6" aria-label="Selected build components">
+                    <button type="button" class="builder-summary-slot" data-builder-jump="cpu">
+                        <span class="builder-slot-icon"><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                        <span class="builder-slot-copy"><small>Processor</small><strong>Choose a processor</strong></span>
+                        <span class="builder-slot-value">Select <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button type="button" class="builder-summary-slot" data-builder-jump="gpu">
+                        <span class="builder-slot-icon"><i class="bi bi-gpu-card" aria-hidden="true"></i></span>
+                        <span class="builder-slot-copy"><small>Graphics</small><strong>Choose a graphics card</strong></span>
+                        <span class="builder-slot-value">Select <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </button>
+                    <button type="button" class="builder-summary-slot" data-builder-jump="ram">
+                        <span class="builder-slot-icon"><i class="bi bi-memory" aria-hidden="true"></i></span>
+                        <span class="builder-slot-copy"><small>Memory</small><strong>Choose your memory</strong></span>
+                        <span class="builder-slot-value">Select <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                    </button>
                 </div>
 
                 <div class="builder-summary-metrics">
