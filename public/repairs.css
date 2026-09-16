@@ -4979,3 +4979,195 @@ img {
     -webkit-text-fill-color: #ffffff !important;
   }
 }
+
+/* Footer polish: organized mobile groups and a clearly active store status. */
+.footer-store-dot {
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.95));
+}
+
+.footer-store-core {
+  background: #22c55e !important;
+  box-shadow: 0 0 6px #22c55e, 0 0 13px rgba(34, 197, 94, 0.8);
+}
+
+.footer-store-pulse {
+  background: #4ade80 !important;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.75);
+}
+
+@media (max-width: 767px) {
+  .site-footer .footer-newsletter .max-w-7xl {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .site-footer .footer-newsletter .flex.flex-col {
+    gap: 22px;
+  }
+
+  .site-footer .footer-newsletter h3 {
+    font-size: clamp(22px, 7vw, 29px);
+    line-height: 1.15;
+  }
+
+  .site-footer .footer-newsletter form > .flex {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .site-footer .footer-newsletter button {
+    width: 100%;
+  }
+
+  .site-footer .footer-main {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .site-footer .footer-main-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .site-footer .footer-brand-column,
+  .site-footer .footer-connect-column {
+    grid-column: 1 / -1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.035);
+    padding: 18px;
+  }
+
+  .site-footer .footer-brand-column {
+    display: grid;
+    gap: 16px;
+  }
+
+  .site-footer .footer-brand-column > p {
+    margin: 0;
+    max-width: none;
+  }
+
+  .site-footer .footer-contact-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .site-footer .footer-contact-list > * {
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
+    background: rgba(0, 0, 0, 0.18);
+    padding: 10px;
+  }
+
+  .site-footer .footer-contact-list > * > div:last-child {
+    min-width: 0;
+  }
+
+  .site-footer .footer-contact-list .text-sm {
+    overflow-wrap: anywhere;
+  }
+
+  .site-footer .footer-link-column {
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.025);
+    padding: 16px 14px;
+  }
+
+  .site-footer .footer-link-column h4,
+  .site-footer .footer-connect-column h4 {
+    margin-bottom: 14px;
+  }
+
+  .site-footer .footer-link-column ul {
+    display: grid;
+    gap: 10px;
+  }
+
+  .site-footer .footer-link-column ul > li + li {
+    margin-top: 0;
+  }
+
+  .site-footer .footer-link-column a {
+    line-height: 1.25;
+  }
+
+  .site-footer .footer-social-list {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 22px;
+  }
+
+  .site-footer .footer-social-list > span {
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    max-height: 48px;
+  }
+
+  .site-footer .footer-payment-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .site-footer .footer-payment-list > div {
+    justify-content: center;
+    min-width: 0;
+    padding: 9px 8px;
+  }
+
+  .site-footer .footer-bottom .max-w-7xl {
+    padding-top: 22px;
+    padding-bottom: calc(22px + env(safe-area-inset-bottom));
+  }
+
+  .site-footer .footer-bottom-row {
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .site-footer .footer-legal {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px 8px;
+    text-align: center;
+  }
+
+  .site-footer .footer-legal span:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .site-footer .footer-store-status {
+    align-self: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 370px) {
+  .site-footer .footer-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer .footer-brand-column,
+  .site-footer .footer-connect-column {
+    grid-column: auto;
+  }
+
+  .site-footer .footer-legal {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer .footer-legal span:first-child {
+    grid-column: auto;
+  }
+}
