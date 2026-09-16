@@ -543,24 +543,32 @@
     
     <div class="absolute inset-0 bg-grid-pattern opacity-[0.03] pointer-events-none"></div>
 
-    <div class="text-center mb-16 reveal-text">
-        
+    <div class="builder-heading text-center reveal-text">
+        <span class="builder-eyebrow">BUILD STATION</span>
         <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">
                             CUSTOM <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">PC BUILDER</span>
                         </h2>
         <p class="text-gray-400 max-w-2xl mx-auto">Select your components and see your dream PC come to life. Choose your core components and request expert compatibility advice.</p>
+
+        <div class="builder-process" aria-label="PC building process">
+            <span><b>01</b> Choose parts</span>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            <span><b>02</b> Review build</span>
+            <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            <span><b>03</b> Add to cart</span>
+        </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div class="builder-layout grid grid-cols-1 lg:grid-cols-12 gap-8">
         
-        <div class="lg:col-span-8 space-y-6">
+        <div class="builder-component-stack lg:col-span-8 space-y-6">
             
 
             
             <div class="glass-panel rounded-xl p-6 component-category" data-category="cpu">
                 <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-2">
                     <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i class="bi bi-cpu text-brand-accent"></i> Processor
+                        <i class="bi bi-cpu text-brand-accent"></i><span><small>STEP 01 · CORE</small>Processor</span>
                     </h3>
 
                     <div class="flex items-center gap-2">
@@ -622,7 +630,7 @@
             <div class="glass-panel rounded-xl p-6 component-category" data-category="gpu">
                 <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-2">
                     <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i class="bi bi-gpu-card text-brand-secondary"></i> Graphics Card
+                        <i class="bi bi-gpu-card text-brand-secondary"></i><span><small>STEP 02 · GRAPHICS</small>Graphics Card</span>
                     </h3>
 
                     <div class="flex items-center gap-2">
@@ -691,7 +699,7 @@
             <div class="glass-panel rounded-xl p-6 component-category" data-category="ram">
                 <div class="flex justify-between items-center mb-4 border-b border-white/5 pb-2">
                     <h3 class="text-xl font-bold flex items-center gap-2">
-                        <i class="bi bi-memory text-brand-danger"></i> Memory
+                        <i class="bi bi-memory text-brand-danger"></i><span><small>STEP 03 · MEMORY</small>Memory</span>
                     </h3>
 
                     <div class="flex items-center gap-2">
@@ -737,11 +745,13 @@
         </div>
 
         
-        <div class="lg:col-span-4">
+        <div class="builder-summary-column lg:col-span-4">
             <div
-                class="self-start glass-panel rounded-xl p-6 border-t-4 border-t-brand-accent shadow-2xl shadow-brand-accent/10"
-                style="position: sticky; top: 112px;">
-                <h3 class="text-2xl font-display font-bold mb-6 border-b border-white/10 pb-4">Build Summary</h3>
+                class="builder-summary-card self-start glass-panel rounded-xl p-6 shadow-2xl shadow-brand-accent/10">
+                <div class="builder-summary-head">
+                    <span class="builder-summary-icon"><i class="bi bi-pc-display" aria-hidden="true"></i></span>
+                    <div><small>LIVE BUILD</small><h3>Build Summary</h3></div>
+                </div>
 
                 <div id="build-list" class="space-y-3 mb-6 min-h-[150px]">
                     <div class="text-gray-500 text-sm italic text-center py-10">Select components to start building...</div>
@@ -776,6 +786,8 @@
                     <span id="builderAddToCartText">Add to Cart</span>
                     <i class="bi bi-cart-check group-hover:translate-x-1 transition-transform"></i>
                 </button>
+
+                <p class="builder-compatibility-note"><i class="bi bi-shield-check" aria-hidden="true"></i> Final compatibility is confirmed by a Digitron expert.</p>
             </div>
         </div>
     </div>
@@ -901,4 +913,3 @@
         </div>
     </div>
 </section>
-
