@@ -3416,6 +3416,11 @@ body[data-page="shop"] .empty-state {
   gap: 24px;
 }
 
+.builder-summary-column {
+  display: flex;
+  min-height: 100%;
+}
+
 #builder .component-category,
 #builder .builder-summary-card {
   position: relative;
@@ -3635,9 +3640,13 @@ body[data-page="shop"] .empty-state {
 }
 
 .builder-summary-card {
-  position: sticky !important;
-  top: 100px;
+  position: relative !important;
+  top: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
   padding: 20px !important;
+  flex-direction: column;
   border-top-width: 1px !important;
   border-top-color: rgba(255, 255, 255, 0.11) !important;
 }
@@ -3678,45 +3687,106 @@ body[data-page="shop"] .empty-state {
 }
 
 #builder #build-list {
-  min-height: 112px;
+  display: grid;
+  min-height: 280px;
   margin-bottom: 13px !important;
-  padding: 8px 12px;
+  padding: 10px;
+  flex: 1 1 auto;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 9px;
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid rgba(255, 255, 255, 0.07);
   border-radius: 13px;
 }
 
-#builder #build-list > .flex {
-  padding: 8px 0;
-  align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-#builder #build-list > .flex:last-child {
-  border-bottom: 0;
-}
-
-#builder #build-list > .flex span {
+.builder-summary-slot {
+  display: grid;
+  width: 100%;
   min-width: 0;
+  min-height: 74px;
+  padding: 11px;
+  align-items: center;
+  grid-template-columns: 39px minmax(0, 1fr) auto;
+  gap: 11px;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 11px;
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.builder-summary-slot:hover {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(2px);
+}
+
+.builder-slot-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  color: #858c98;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 11px;
+  font-size: 16px;
+}
+
+.builder-slot-copy {
+  display: block;
+  min-width: 0;
+}
+
+.builder-slot-copy small,
+.builder-slot-copy strong {
+  display: block;
+}
+
+.builder-slot-copy small {
+  margin-bottom: 5px;
+  color: #737b87;
+  font: 700 8px Orbitron, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.builder-slot-copy strong {
   overflow: hidden;
-  color: #c7ccd4;
+  color: #a8afb9;
+  font-size: 12px;
+  font-weight: 700;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-#builder #build-list > .flex strong {
-  flex: 0 0 auto;
-  margin-left: 10px;
-  color: #fff;
+.builder-slot-value {
+  color: #747c87;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-#builder #build-list > .text-gray-500 {
-  display: flex;
-  min-height: 94px;
-  padding: 14px !important;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.55;
+.builder-slot-value i {
+  margin-left: 3px;
+  font-size: 9px;
+}
+
+.builder-summary-slot.is-filled {
+  background: rgba(255, 255, 255, 0.055);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.builder-summary-slot.is-filled .builder-slot-icon {
+  color: #17181a;
+  background: #fff;
+  border-color: #fff;
+}
+
+.builder-summary-slot.is-filled .builder-slot-copy strong,
+.builder-summary-slot.is-filled .builder-slot-value {
+  color: #fff;
 }
 
 #builder .builder-summary-card > .mb-6 {
@@ -3891,6 +3961,10 @@ body[data-page="shop"] .empty-state {
     position: relative !important;
     top: auto;
   }
+
+  #builder #build-list {
+    min-height: 270px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -3968,6 +4042,25 @@ body[data-page="shop"] .empty-state {
   .builder-summary-card {
     padding: 16px !important;
     border-radius: 17px !important;
+  }
+
+  #builder #build-list {
+    min-height: 0;
+    padding: 8px;
+    grid-template-rows: repeat(3, minmax(76px, auto));
+  }
+
+  .builder-summary-slot {
+    grid-template-columns: 36px minmax(0, 1fr);
+  }
+
+  .builder-slot-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .builder-slot-value {
+    display: none;
   }
 }
 
