@@ -787,51 +787,57 @@
 </section>
 
 
-<section class="py-20">
-    <h2 class="text-3xl font-display font-bold mb-12 text-center">TRENDING <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">NOW</span></h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-96 md:h-[500px]">
-        <div class="lg:col-span-2 lg:row-span-2 relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10">
-            <img src="/images/categories/gpu.png" class="absolute inset-0 w-full h-full object-contain p-10 opacity-80 transition-transform duration-700 group-hover:scale-110" alt="GPUs">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-8">
-                <h3 class="text-3xl font-bold mb-2">Graphics Cards</h3>
-                <p class="text-gray-300 mb-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">RTX 40 Series & AMD RX 7000 Series available now.</p>
-                <span class="text-brand-accent font-bold flex items-center gap-2">Shop Now <i class="bi bi-arrow-right"></i></span>
-            </div>
+<section class="trending-section">
+    <div class="trending-heading">
+        <div>
+            <span class="trending-eyebrow">POPULAR RIGHT NOW</span>
+            <h2>TRENDING <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-secondary">HARDWARE</span></h2>
         </div>
+        <p>Explore the components builders are choosing for powerful gaming, creative and everyday systems.</p>
+        <a href="/shop" class="store-button secondary">View all products <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
 
-        <div class="relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10">
-            <img src="/images/categories/processors.png" class="absolute inset-0 w-full h-full object-contain p-10 opacity-80 transition-transform duration-700 group-hover:scale-110" alt="CPUs">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="text-xl font-bold">Processors</h3>
-            </div>
-        </div>
+    <div class="trending-grid">
+        <a href="/shop?category=graphics-cards" class="trend-card trend-featured" style="--trend-color:#7000ff;--trend-rgb:112,0,255">
+            <span class="trend-card-surface">
+                <img src="/images/categories/gpu.png" alt="Graphics cards">
+                <span class="trend-card-shade"></span>
+                <span class="trend-card-badge"><i class="bi bi-stars" aria-hidden="true"></i> Featured</span>
+                <span class="trend-card-content"><small>GRAPHICS CARDS</small><strong>Power every frame.</strong><span>Explore current NVIDIA and AMD graphics options for your next build.</span><b>Shop GPUs <i class="bi bi-arrow-right" aria-hidden="true"></i></b></span>
+            </span>
+        </a>
 
-        <div class="relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10">
-            <img src="/images/categories/motherboards.png" class="absolute inset-0 w-full h-full object-contain p-10 opacity-80 transition-transform duration-700 group-hover:scale-110" alt="Motherboards">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="text-xl font-bold">Motherboards</h3>
-            </div>
-        </div>
+        <a href="/shop?category=processors" class="trend-card" style="--trend-color:#00f0ff;--trend-rgb:0,240,255">
+            <span class="trend-card-surface">
+                <img src="/images/categories/processors.png" alt="Processors">
+                <span class="trend-card-shade"></span>
+                <span class="trend-card-content"><small>PROCESSORS</small><strong>Built for speed.</strong><b>Explore CPUs <i class="bi bi-arrow-right" aria-hidden="true"></i></b></span>
+            </span>
+        </a>
 
-        <div class="relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10">
-            <img src="/images/categories/ssd.png" class="absolute inset-0 w-full h-full object-contain p-10 opacity-80 transition-transform duration-700 group-hover:scale-110" alt="Peripherals">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="text-xl font-bold">Peripherals</h3>
-            </div>
-        </div>
+        <a href="/shop?category=motherboards" class="trend-card" style="--trend-color:#ff2d55;--trend-rgb:255,45,85">
+            <span class="trend-card-surface">
+                <img src="/images/categories/motherboards.png" alt="Motherboards">
+                <span class="trend-card-shade"></span>
+                <span class="trend-card-content"><small>MOTHERBOARDS</small><strong>The foundation matters.</strong><b>Explore boards <i class="bi bi-arrow-right" aria-hidden="true"></i></b></span>
+            </span>
+        </a>
 
-        <div class="relative group overflow-hidden rounded-2xl cursor-pointer border border-white/10">
-            <img src="/images/categories/psu.png" class="absolute inset-0 w-full h-full object-contain p-10 opacity-80 transition-transform duration-700 group-hover:scale-110" alt="Cooling">
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="text-xl font-bold">Cooling</h3>
-            </div>
-        </div>
+        <a href="/shop?category=storage" class="trend-card" style="--trend-color:#ffaa00;--trend-rgb:255,170,0">
+            <span class="trend-card-surface">
+                <img src="/images/categories/ssd.png" alt="Storage">
+                <span class="trend-card-shade"></span>
+                <span class="trend-card-content"><small>STORAGE</small><strong>Faster load times.</strong><b>Explore storage <i class="bi bi-arrow-right" aria-hidden="true"></i></b></span>
+            </span>
+        </a>
+
+        <a href="/shop?category=power-supply" class="trend-card" style="--trend-color:#38bdf8;--trend-rgb:56,189,248">
+            <span class="trend-card-surface">
+                <img src="/images/categories/psu.png" alt="Power supplies">
+                <span class="trend-card-shade"></span>
+                <span class="trend-card-content"><small>POWER SUPPLIES</small><strong>Reliable clean power.</strong><b>Explore PSUs <i class="bi bi-arrow-right" aria-hidden="true"></i></b></span>
+            </span>
+        </a>
     </div>
 </section>
 
