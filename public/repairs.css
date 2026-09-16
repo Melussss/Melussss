@@ -4401,3 +4401,509 @@ body[data-page="shop"] .empty-state {
     padding: 18px;
   }
 }
+
+/* ========================================================================== 
+   Mobile responsive and scroll-rendering stability pass — 2026-09-16
+   ========================================================================== */
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  background-color: #202124 !important;
+  overscroll-behavior-x: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100svh;
+  overflow-x: hidden !important;
+}
+
+#main,
+main,
+footer,
+main > section {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#main,
+footer {
+  background-color: #202124;
+}
+
+img,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  body {
+    min-height: 100svh;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Keep the fixed header inside narrow screens. Primary links remain in Menu. */
+  #siteHeader {
+    max-width: 100vw;
+  }
+
+  #siteHeader .header-row {
+    min-height: 68px;
+    padding-top: max(8px, env(safe-area-inset-top)) !important;
+    padding-right: max(12px, env(safe-area-inset-right)) !important;
+    padding-bottom: 8px !important;
+    padding-left: max(12px, env(safe-area-inset-left)) !important;
+    gap: 8px;
+  }
+
+  #siteHeader .brand {
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  #siteHeader .brand-logo {
+    width: auto;
+    height: 44px;
+    max-width: 118px;
+  }
+
+  #siteHeader .store-actions > a.icon-btn,
+  #siteHeader .icon-label {
+    display: none !important;
+  }
+
+  #siteHeader .store-actions {
+    gap: 3px;
+  }
+
+  #siteHeader .store-actions .icon-btn {
+    width: 40px;
+    height: 42px;
+    flex: 0 0 40px;
+  }
+
+  #siteHeader.scrolled,
+  .header-glass {
+    background: rgba(32, 33, 36, 0.98) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  /* Stable mobile hero height avoids browser-toolbar resize jumps. */
+  .vs-hero {
+    height: 100svh;
+    min-height: 570px;
+    background: #202124;
+  }
+
+  .vs-content {
+    width: 100%;
+    height: 100%;
+    max-width: 620px;
+    padding: 94px 20px 76px !important;
+  }
+
+  .vs-title {
+    font-size: clamp(31px, 10vw, 44px) !important;
+    line-height: 1.08;
+  }
+
+  .vs-text {
+    max-width: 37ch;
+    margin-right: 0;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .vs-btn {
+    width: min(100%, 280px);
+    justify-content: center;
+  }
+
+  .vs-bg-video {
+    background-color: #202124;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .vs-dots {
+    bottom: 14px;
+  }
+
+  #vsHero > .slider-pause {
+    right: 12px;
+    bottom: 12px;
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  /* Showcase and category cards remain fully visible at phone widths. */
+  .dc-showcase-section {
+    padding-top: 44px !important;
+    padding-bottom: 56px !important;
+  }
+
+  .dc-showcase-section > .max-w-7xl {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .dc-showcase-layout {
+    gap: 16px !important;
+    margin-bottom: 52px !important;
+  }
+
+  .dc-poster-slider {
+    border-radius: 18px !important;
+  }
+
+  .dc-poster-arrow {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .dc-poster-arrow.prev {
+    left: 10px !important;
+  }
+
+  .dc-poster-arrow.next {
+    right: 10px !important;
+  }
+
+  #dcPosterSlider > .slider-pause {
+    right: 10px;
+    bottom: 9px;
+    max-width: 112px;
+    padding: 5px 8px;
+    overflow: hidden;
+    font-size: 9px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dc-promo-stack {
+    gap: 12px !important;
+  }
+
+  .dc-showcase-section .dc-promo-card {
+    min-height: 0 !important;
+  }
+
+  .dc-showcase-section .dc-promo-card > .relative.flex {
+    min-height: 128px;
+    padding: 16px !important;
+    gap: 13px !important;
+  }
+
+  .dc-showcase-section .dc-promo-card > .relative.flex > div:first-of-type {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 14px !important;
+  }
+
+  .dc-showcase-section .dc-promo-card h4 {
+    font-size: 17px;
+  }
+
+  .dc-showcase-section .dc-promo-card p {
+    margin-top: 5px !important;
+    font-size: 12px;
+    line-height: 1.45 !important;
+  }
+
+  .dc-categories-section > div:first-child {
+    margin-bottom: 28px !important;
+  }
+
+  .dc-categories-section > div:first-child h2 {
+    font-size: clamp(29px, 9vw, 40px);
+  }
+
+  #dcCategoriesGrid {
+    gap: 20px 8px !important;
+  }
+
+  .dc-categories-section .dc-orbit-category {
+    padding: 8px 2px;
+  }
+
+  .dc-categories-section .dc-orbit-category > div:last-child {
+    margin-top: 13px !important;
+  }
+
+  .dc-categories-section .dc-orbit-category h3 {
+    font-size: 15px;
+  }
+
+  .dc-showcase-section .mt-16.glass-panel {
+    margin-top: 44px !important;
+    padding: 18px !important;
+    overflow: hidden;
+  }
+
+  .dc-showcase-section .mt-16.glass-panel > .grid {
+    gap: 18px 12px !important;
+  }
+
+  /* Prevent horizontal cards and summaries from widening the page. */
+  #builder,
+  .trending-section,
+  .store-page,
+  .shop-catalog {
+    min-width: 0;
+  }
+
+  #builder .builder-layout,
+  #builder .builder-component-stack,
+  #builder .component-category,
+  #builder .builder-summary-column,
+  #builder .builder-summary-card,
+  #builder .builder-track {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #builder .builder-track {
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .trending-section {
+    width: calc(100% - 32px);
+  }
+
+  .trend-card-surface,
+  .trend-card img,
+  .trend-card-shade {
+    border-radius: 18px;
+  }
+
+  /* About and contact heroes no longer crop their copy or buttons. */
+  body[data-page="about"] main > section:first-child {
+    height: auto !important;
+    min-height: 100svh !important;
+    padding: 110px 0 130px;
+  }
+
+  body[data-page="about"] main > section:first-child h1,
+  body[data-page="quote"] main > section:first-child h1 {
+    font-size: clamp(37px, 12vw, 54px) !important;
+  }
+
+  body[data-page="about"] main > section:first-child p,
+  body[data-page="quote"] main > section:first-child p {
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+  }
+
+  body[data-page="about"] main > section:first-child .inline-flex,
+  body[data-page="quote"] main > section:first-child .inline-flex {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  body[data-page="about"] main > section:nth-child(2) > .glass-panel {
+    margin-right: 16px !important;
+    margin-left: 16px !important;
+    padding: 20px !important;
+  }
+
+  body[data-page="about"] main > section:nth-child(2) .grid {
+    gap: 24px 10px !important;
+  }
+
+  body[data-page="about"] main > section:nth-child(2) .counter-up {
+    font-size: clamp(23px, 7vw, 32px);
+  }
+
+  body[data-page="quote"] main > section:first-child {
+    height: auto !important;
+    min-height: 690px !important;
+    padding: 110px 0 120px !important;
+  }
+
+  body[data-page="quote"] main > section:first-child .flex.flex-wrap {
+    width: 100%;
+    gap: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  body[data-page="quote"] main > section:first-child :is(a.rounded-full, button.rounded-full) {
+    min-width: 0;
+    flex: 1 1 145px;
+    justify-content: center;
+  }
+
+  #contact-methods {
+    margin-top: 0 !important;
+    padding-top: 48px !important;
+  }
+
+  #quote-section,
+  #story,
+  body[data-page="about"] main > section,
+  body[data-page="quote"] main > section {
+    max-width: 100%;
+  }
+
+  [class*="-bottom-6"][class*="-left-6"].glass-panel {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin-top: 16px;
+  }
+
+  /* Compact shared pages and dialogs without removing any controls. */
+  .store-page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .store-dialog:not(#menuDialog) {
+    width: calc(100% - 20px);
+    max-height: calc(100dvh - 20px);
+    padding: 16px;
+  }
+
+  .product-details dl {
+    grid-template-columns: minmax(95px, 0.42fr) minmax(0, 1fr);
+  }
+
+  .dc-chatbot {
+    right: max(12px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+  }
+
+  .dc-chatbot-panel {
+    max-height: calc(100dvh - 100px);
+  }
+
+  footer .max-w-7xl {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  #siteHeader .brand-logo {
+    height: 40px;
+    max-width: 102px;
+  }
+
+  #siteHeader .store-actions .icon-btn {
+    width: 36px;
+    flex-basis: 36px;
+  }
+
+  .vs-content {
+    padding-right: 16px !important;
+    padding-left: 16px !important;
+  }
+
+  .dc-orbit-circle {
+    width: 108px !important;
+    height: 108px !important;
+  }
+
+  .builder-process span {
+    padding-right: 8px;
+    font-size: 9px;
+  }
+
+  .builder-summary-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .shop-toolbar-actions {
+    gap: 5px;
+  }
+
+  .shop-toolbar-actions .store-button {
+    padding-right: 9px !important;
+    padding-left: 9px !important;
+    font-size: 12px;
+  }
+
+  .cart-row {
+    grid-template-columns: 44px minmax(0, 1fr);
+  }
+
+  .cart-row img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Mobile GPU stability: preserve the look with static thin borders. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .glass-panel,
+  .dc-promo-card,
+  .shop-confidence-panel,
+  .product-card-badges span,
+  .trend-card-badge,
+  .store-dialog,
+  .store-dialog::backdrop {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+
+  #builder .component-category::before,
+  #builder .builder-summary-card::before,
+  #builder .component-card.is-selected::before {
+    inset: -1px;
+    padding: 0;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    -webkit-mask: none;
+    mask: none;
+    animation: none !important;
+  }
+
+  .trend-card::before {
+    inset: -1px;
+    padding: 0;
+    background: none;
+    border: 1px solid rgba(var(--trend-rgb), 0.55);
+    -webkit-mask: none;
+    mask: none;
+    animation: none !important;
+  }
+
+  .component-card,
+  .dc-promo-card,
+  .dc-orbit-circle,
+  .trend-card-surface,
+  .trend-card img,
+  .parallax-bg,
+  .catFloatWrap {
+    will-change: auto !important;
+    transform-style: flat !important;
+  }
+
+  .component-card:hover,
+  .dc-promo-card:hover,
+  .trend-card:hover .trend-card-surface,
+  .trend-card:focus-visible .trend-card-surface {
+    transform: none !important;
+  }
+
+  .animate-spin-slow,
+  footer .animate-pulse {
+    animation: none !important;
+  }
+}
