@@ -5533,3 +5533,41 @@ img {
     line-height: 1.6;
   }
 }
+
+/* ==========================================================================
+   Custom PC Builder — keep product artwork fully visible
+   ========================================================================== */
+#builder .component-card > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 176px !important;
+  min-height: 176px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+}
+
+#builder .component-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+}
+
+#builder .component-card:hover img,
+#builder .component-card.is-selected img {
+  transform: none !important;
+}
+
+@media (max-width: 767px) {
+  #builder .component-card > div:first-child {
+    height: 158px !important;
+    min-height: 158px !important;
+    padding: 10px !important;
+  }
+}
