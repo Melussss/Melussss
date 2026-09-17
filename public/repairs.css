@@ -5484,20 +5484,3 @@ img {
     height: 40px;
   }
 }
-
-
-/* Desktop header alignment: match the logo to the hero headline's 70px left edge. */
-@media (min-width: 1001px) {
-  #siteHeader .brand {
-    padding-left: 46px;
-    gap: 18px;
-  }
-
-  #siteHeader .brand-logo {
-    height: 46px;
-  }
-
-  #siteHeader .brand-text {
-    margin-left: 0;
-  }
-}
