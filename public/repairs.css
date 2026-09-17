@@ -5620,3 +5620,29 @@ img {
 #builderAddToCartBtn > i {
   font-size: 1.05em;
 }
+
+/* ========================================================================== 
+   Custom PC Builder — snow-white Add to Cart label + icon
+   ========================================================================== */
+#builderAddToCartBtn,
+#builderAddToCartBtn * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 0 1px #ffffff, 0 0 7px rgba(255, 255, 255, 0.34) !important;
+}
+
+#builderAddToCartBtn i,
+#builderAddToCartBtn i::before,
+#builderAddToCartBtn svg,
+#builderAddToCartBtn svg *,
+#builderAddToCartBtn path {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Do not fade the white label/icon when the builder button is disabled. */
+#builderAddToCartBtn:disabled {
+  opacity: 1 !important;
+}
