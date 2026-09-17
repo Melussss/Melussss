@@ -5681,3 +5681,11 @@ img {
   }
 }
 
+
+/* Desktop-only brand alignment with the rotating hero headline. */
+@media (min-width: 1001px) {
+  #siteHeader .brand {
+    padding-left: 46px;
+    gap: 16px;
+  }
+}
