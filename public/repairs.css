@@ -4849,7 +4849,8 @@ img {
   }
 }
 
-/* Mobile GPU stability: preserve the look with static thin borders. */
+/* Mobile GPU stability: keep costly blur effects off, but preserve the homepage
+   travelling border strokes on Custom PC Builder and Trending cards. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) {
   .glass-panel,
   .dc-promo-card,
@@ -4865,23 +4866,25 @@ img {
   #builder .component-category::before,
   #builder .builder-summary-card::before,
   #builder .component-card.is-selected::before {
-    inset: -1px;
-    padding: 0;
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    -webkit-mask: none;
-    mask: none;
-    animation: none !important;
+    inset: -2px;
+    padding: 1px;
+    border: 0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: builder-stroke-travel 6s linear infinite !important;
   }
 
   .trend-card::before {
-    inset: -1px;
-    padding: 0;
-    background: none;
-    border: 1px solid rgba(var(--trend-rgb), 0.55);
-    -webkit-mask: none;
-    mask: none;
-    animation: none !important;
+    inset: -2px;
+    padding: 1px;
+    border: 0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: trend-stroke-travel 6.5s linear infinite !important;
   }
 
   .component-card,
