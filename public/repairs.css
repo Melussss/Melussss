@@ -5576,15 +5576,18 @@ img {
 }
 
 /* ==========================================================================
-   Custom PC Builder — stronger Add to Cart CTA contrast
+   Custom PC Builder — bright Add to Cart CTA, matching the quote CTA
    ========================================================================== */
 #builderAddToCartBtn {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
-  background: #ffffff !important;
-  border: 1px solid #ffffff !important;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28) !important;
-  font-weight: 800 !important;
+  background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 12px 30px rgba(0, 240, 255, 0.28),
+    0 0 24px rgba(112, 0, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+  font-weight: 900 !important;
   letter-spacing: 0.015em;
 }
 
@@ -5597,18 +5600,21 @@ img {
 #builderAddToCartBtn:not(:disabled):focus-visible {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
-  background: #f2f2f2 !important;
+  background: linear-gradient(90deg, #62f7ff 0%, #9a5cff 100%) !important;
   border-color: #ffffff !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.34) !important;
+  box-shadow:
+    0 14px 36px rgba(0, 240, 255, 0.38),
+    0 0 30px rgba(112, 0, 255, 0.3) !important;
+  filter: brightness(1.08);
   transform: translateY(-1px);
 }
 
 #builderAddToCartBtn:disabled {
   color: #000000 !important;
   -webkit-text-fill-color: #000000 !important;
-  background: #ffffff !important;
-  border-color: #ffffff !important;
-  opacity: 0.48 !important;
+  background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
+  border-color: rgba(255, 255, 255, 0.58) !important;
+  opacity: 0.58 !important;
 }
 
 #builderAddToCartBtn > i {
