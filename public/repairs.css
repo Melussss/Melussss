@@ -5574,3 +5574,47 @@ img {
     padding: 10px !important;
   }
 }
+
+/* ==========================================================================
+   Custom PC Builder — stronger Add to Cart CTA contrast
+   ========================================================================== */
+#builderAddToCartBtn:not(:disabled) {
+  color: #071014 !important;
+  -webkit-text-fill-color: #071014 !important;
+  background: linear-gradient(135deg, #00f0ff 0%, #7df6ff 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 10px 26px rgba(0, 240, 255, 0.22),
+    0 0 0 1px rgba(0, 240, 255, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.015em;
+  opacity: 1 !important;
+}
+
+#builderAddToCartBtn:not(:disabled):hover,
+#builderAddToCartBtn:not(:disabled):focus-visible {
+  color: #05080a !important;
+  -webkit-text-fill-color: #05080a !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 12px 32px rgba(0, 240, 255, 0.32),
+    0 0 0 2px rgba(0, 240, 255, 0.34) !important;
+  transform: translateY(-1px);
+}
+
+#builderAddToCartBtn:disabled {
+  color: rgba(255, 255, 255, 0.78) !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.78) !important;
+  background: rgba(0, 240, 255, 0.10) !important;
+  border: 1px solid rgba(0, 240, 255, 0.48) !important;
+  box-shadow:
+    0 0 0 1px rgba(0, 240, 255, 0.08),
+    inset 0 0 22px rgba(0, 240, 255, 0.05) !important;
+  opacity: 0.82 !important;
+}
+
+#builderAddToCartBtn > i {
+  font-size: 1.05em;
+}
