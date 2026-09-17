@@ -178,7 +178,7 @@
   <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-12 items-start">
       
-      <div class="lg:sticky lg:top-28 space-y-8">
+      <div class="quote-info-column lg:sticky lg:top-28 space-y-8">
         <div>
           <span class="text-brand-accent text-sm font-bold uppercase tracking-[0.3em] mb-4 block">Custom Builds</span>
           <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">GET YOUR <span class="text-brand-secondary">QUOTE</span></h2>
@@ -189,7 +189,7 @@
         </div>
 
         
-        <div class="glass-panel rounded-2xl p-6 border border-white/10">
+        <div class="quote-benefits-panel glass-panel rounded-2xl p-6 border border-white/10">
           <h3 class="font-bold text-white mb-4 flex items-center gap-2">
             <i class="bi bi-check-circle-fill text-brand-accent"></i>
             Why Request a Quote?
@@ -225,7 +225,7 @@
         </div>
 
         
-        <div class="space-y-3" x-data="{ open: null }">
+        <div class="quote-faq-list space-y-3" x-data="{ open: null }">
           <h3 class="font-bold text-white mb-4">Common Questions</h3>
 
           
@@ -306,7 +306,7 @@
         </div>
 
         
-        <div class="flex flex-wrap items-center gap-6 pt-4">
+        <div class="quote-trust-row flex flex-wrap items-center gap-6 pt-4">
           <div class="flex items-center gap-2 text-sm text-gray-400">
             <i class="bi bi-shield-check text-brand-accent text-lg"></i>
             <span>Secure Form</span>
@@ -323,9 +323,9 @@
       </div>
 
       
-      <div class="glass-panel rounded-3xl border border-white/10 p-6 md:p-10 relative overflow-hidden">
+      <div class="quote-form-panel glass-panel rounded-3xl border border-white/10 p-6 md:p-10 relative overflow-hidden">
         
-        <div class="flex items-center gap-4 mb-8 pb-6 border-b border-white/10">
+        <div class="quote-form-header flex items-center gap-4 mb-8 pb-6 border-b border-white/10">
           <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-accent to-brand-secondary flex items-center justify-center text-black text-2xl shadow-lg shadow-brand-accent/30">
             <i class="bi bi-calculator-fill"></i>
           </div>
@@ -446,7 +446,7 @@
             </div>
 
             
-            <div class="space-y-2">
+            <div class="quote-use-cases space-y-2">
               <label class="text-sm text-gray-400">Primary Use Case (select all that apply)</label>
               <div class="flex flex-wrap gap-3">
                 
@@ -545,7 +545,7 @@
             
             <div class="relative">
               <input type="file" name="attachments[]" multiple id="file-upload" class="sr-only" accept=".jpg,.jpeg,.png,.pdf,.txt">
-              <label for="file-upload" class="flex items-center gap-3 p-4 rounded-xl border border-dashed border-white/20 bg-white/5 cursor-pointer hover:border-brand-accent/50 hover:bg-white/10 transition-all group">
+              <label for="file-upload" class="quote-file-upload flex items-center gap-3 p-4 rounded-xl border border-dashed border-white/20 bg-white/5 cursor-pointer hover:border-brand-accent/50 hover:bg-white/10 transition-all group">
                 <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-brand-accent/20 transition-colors">
                   <i class="bi bi-cloud-arrow-up text-xl text-gray-400 group-hover:text-brand-accent"></i>
                 </div>
