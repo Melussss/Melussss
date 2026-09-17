@@ -4849,7 +4849,8 @@ img {
   }
 }
 
-/* Mobile GPU stability: preserve the look with static thin borders. */
+/* Mobile GPU stability: keep costly blur effects off, but preserve the homepage
+   travelling border strokes on Custom PC Builder and Trending cards. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) {
   .glass-panel,
   .dc-promo-card,
@@ -4865,23 +4866,25 @@ img {
   #builder .component-category::before,
   #builder .builder-summary-card::before,
   #builder .component-card.is-selected::before {
-    inset: -1px;
-    padding: 0;
-    background: none;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    -webkit-mask: none;
-    mask: none;
-    animation: none !important;
+    inset: -2px;
+    padding: 1px;
+    border: 0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: builder-stroke-travel 6s linear infinite !important;
   }
 
   .trend-card::before {
-    inset: -1px;
-    padding: 0;
-    background: none;
-    border: 1px solid rgba(var(--trend-rgb), 0.55);
-    -webkit-mask: none;
-    mask: none;
-    animation: none !important;
+    inset: -2px;
+    padding: 1px;
+    border: 0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: trend-stroke-travel 6.5s linear infinite !important;
   }
 
   .component-card,
@@ -5450,6 +5453,199 @@ img {
   }
 }
 
+/* Quote mobile spacing follow-up: prevent floating-label collisions and open up key sections. */
+@media (max-width: 767px) {
+  /* Keep floating labels permanently above the field border on mobile. */
+  #quoteForm .relative.group {
+    padding-top: 10px;
+  }
+
+  #quoteForm .relative.group > label.absolute {
+    top: 10px !important;
+    left: 12px !important;
+    z-index: 2;
+    max-width: calc(100% - 64px);
+    padding: 0 7px !important;
+    background: #0a0a0f !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #quoteForm .relative.group > i.absolute:not(.bottom-3) {
+    top: 37px !important;
+  }
+
+  #quoteForm #budget ~ span.absolute {
+    top: calc(50% + 5px) !important;
+  }
+
+  /* Give section headings breathing room before their first fields. */
+  #quoteForm > .space-y-4 > h4 {
+    margin-bottom: 20px !important;
+  }
+
+  #quoteForm > .space-y-4 > h4 + .grid {
+    margin-top: 0 !important;
+  }
+
+  /* More room inside the Why Request a Quote card. */
+  .quote-benefits-panel {
+    padding: 26px 20px !important;
+  }
+
+  .quote-benefits-panel > h3 {
+    margin-bottom: 22px !important;
+  }
+
+  /* Separate Primary Use Case from the budget/quote-type row above. */
+  .quote-use-cases {
+    margin-top: 28px !important;
+  }
+
+  .quote-use-cases > label:first-child {
+    display: block;
+    margin-bottom: 12px !important;
+    line-height: 1.4;
+  }
+
+  /* Separate the privacy note from the quote button. */
+  #quoteForm > p.text-xs {
+    margin-top: 34px !important;
+  }
+
+  /* Give showroom address and opening-hours blocks clear separation. */
+  #showroom .space-y-6.mb-8 {
+    display: grid;
+    gap: 30px !important;
+  }
+
+  #showroom .space-y-6.mb-8 > * {
+    margin-top: 0 !important;
+  }
+
+  #showroom .space-y-6.mb-8 h4 {
+    margin-bottom: 7px !important;
+    line-height: 1.3;
+  }
+
+  #showroom .space-y-6.mb-8 p {
+    line-height: 1.6;
+  }
+}
+
+/* ==========================================================================
+   Custom PC Builder — keep product artwork fully visible
+   ========================================================================== */
+#builder .component-card > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 176px !important;
+  min-height: 176px !important;
+  padding: 12px !important;
+  overflow: hidden !important;
+}
+
+#builder .component-card img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  transform: none !important;
+}
+
+#builder .component-card:hover img,
+#builder .component-card.is-selected img {
+  transform: none !important;
+}
+
+@media (max-width: 767px) {
+  #builder .component-card > div:first-child {
+    height: 158px !important;
+    min-height: 158px !important;
+    padding: 10px !important;
+  }
+}
+
+/* ==========================================================================
+   Custom PC Builder — bright Add to Cart CTA, matching the quote CTA
+   ========================================================================== */
+#builderAddToCartBtn {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.72) !important;
+  box-shadow:
+    0 12px 30px rgba(0, 240, 255, 0.28),
+    0 0 24px rgba(112, 0, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55) !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.015em;
+}
+
+#builderAddToCartBtn > :is(i, svg, span) {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+#builderAddToCartBtn:not(:disabled):hover,
+#builderAddToCartBtn:not(:disabled):focus-visible {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(90deg, #62f7ff 0%, #9a5cff 100%) !important;
+  border-color: #ffffff !important;
+  box-shadow:
+    0 14px 36px rgba(0, 240, 255, 0.38),
+    0 0 30px rgba(112, 0, 255, 0.3) !important;
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+#builderAddToCartBtn:disabled {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
+  border-color: rgba(255, 255, 255, 0.58) !important;
+  opacity: 0.58 !important;
+}
+
+#builderAddToCartBtn > i {
+  font-size: 1.05em;
+}
+
+/* ========================================================================== 
+   Custom PC Builder — snow-white Add to Cart label + icon
+   ========================================================================== */
+#builderAddToCartBtn,
+#builderAddToCartBtn * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: 0 0 1px #ffffff, 0 0 7px rgba(255, 255, 255, 0.34) !important;
+}
+
+#builderAddToCartBtn i,
+#builderAddToCartBtn i::before,
+#builderAddToCartBtn svg,
+#builderAddToCartBtn svg *,
+#builderAddToCartBtn path {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Do not fade the white label/icon when the builder button is disabled. */
+#builderAddToCartBtn:disabled {
+  opacity: 1 !important;
+}
 
 /* Header logo sizing and brand offset tweak */
 #siteHeader .brand {
@@ -5484,3 +5680,4 @@ img {
     height: 40px;
   }
 }
+
