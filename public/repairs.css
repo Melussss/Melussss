@@ -5579,8 +5579,8 @@ img {
    Custom PC Builder — bright Add to Cart CTA, matching the quote CTA
    ========================================================================== */
 #builderAddToCartBtn {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
   border: 1px solid rgba(255, 255, 255, 0.72) !important;
   box-shadow:
@@ -5592,14 +5592,14 @@ img {
 }
 
 #builderAddToCartBtn > :is(i, svg, span) {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 #builderAddToCartBtn:not(:disabled):hover,
 #builderAddToCartBtn:not(:disabled):focus-visible {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   background: linear-gradient(90deg, #62f7ff 0%, #9a5cff 100%) !important;
   border-color: #ffffff !important;
   box-shadow:
@@ -5610,8 +5610,8 @@ img {
 }
 
 #builderAddToCartBtn:disabled {
-  color: #000000 !important;
-  -webkit-text-fill-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
   background: linear-gradient(90deg, #00f0ff 0%, #7000ff 100%) !important;
   border-color: rgba(255, 255, 255, 0.58) !important;
   opacity: 0.58 !important;
