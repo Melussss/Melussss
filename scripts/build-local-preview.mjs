@@ -22,7 +22,9 @@ function localURL(value){
  if(u.pathname.startsWith('/shop/')){name='shop';u.searchParams.set('category',u.pathname.split('/')[2]);}
  return name+'.html'+u.search+u.hash;
 }
-const routes=['/','/about','/quote','/shop','/cart','/wishlist','/checkout',...products.map(p=>'/product/'+p.slug)];
+// Product detail pages are rendered dynamically by the Cloudflare Worker at /product/:slug.
+// Do not generate one standalone HTML file per product.
+const routes=['/','/about','/quote','/shop','/cart','/wishlist','/checkout'];
 for(const route of routes){
  let {html,status}=page(new URL(route,'https://local.invalid'),products);
  if(status!==200)throw Error('Unable to generate '+route);
