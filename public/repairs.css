@@ -6446,3 +6446,41 @@ body > noscript {
     animation: none !important;
   }
 }
+
+/* ===== Circuit background visibility correction =====
+   The main wrapper used to paint a solid #202124 canvas over the body pattern. */
+#main {
+  background-color: transparent !important;
+}
+
+/* Keep the actual site chrome solid while allowing open page canvas to reveal the effect. */
+footer {
+  background-color: #202124 !important;
+}
+
+/* Slightly stronger, still subdued circuit traces for dark displays. */
+body {
+  background-image:
+    radial-gradient(circle at 24px 24px, rgba(0, 240, 255, .30) 0 1.35px, transparent 1.8px),
+    radial-gradient(circle at 88px 72px, rgba(0, 240, 255, .20) 0 1.15px, transparent 1.55px),
+    linear-gradient(90deg, transparent 0 23px, rgba(0, 240, 255, .115) 23px 24px, transparent 24px 72px),
+    linear-gradient(0deg, transparent 0 23px, rgba(0, 240, 255, .095) 23px 24px, transparent 24px 72px),
+    linear-gradient(90deg, transparent 0 87px, rgba(111, 94, 255, .07) 87px 88px, transparent 88px 144px),
+    linear-gradient(0deg, transparent 0 71px, rgba(255, 255, 255, .045) 71px 72px, transparent 72px 144px) !important;
+}
+
+body::before {
+  opacity: .52;
+  background-image:
+    linear-gradient(90deg, transparent 0 17%, rgba(0,240,255,.12) 17% 17.2%, transparent 17.2% 52%, rgba(112,86,255,.075) 52% 52.15%, transparent 52.15%),
+    linear-gradient(0deg, transparent 0 31%, rgba(0,240,255,.09) 31% 31.15%, transparent 31.15% 68%, rgba(255,255,255,.045) 68% 68.12%, transparent 68.12%);
+}
+
+@keyframes dcCircuitPulse {
+  from { opacity: .34; transform: translate3d(0,0,0); }
+  to   { opacity: .56; transform: translate3d(10px,-8px,0); }
+}
+
+@media (max-width: 767px) {
+  body::before { opacity: .40; }
+}
