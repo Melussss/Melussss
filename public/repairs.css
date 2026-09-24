@@ -5917,3 +5917,160 @@ img {
     grid-template-columns: minmax(88px, .42fr) minmax(0, 1fr) !important;
   }
 }
+
+
+/* Product detail mobile extra spacing — 2026-09-24 v3 */
+@media (max-width: 767px) {
+  body[data-page="product"] main > section {
+    padding-bottom: 72px !important;
+  }
+
+  body[data-page="product"] main > section > .max-w-7xl > .grid {
+    gap: 44px !important;
+  }
+
+  body[data-page="product"] #main-gallery {
+    margin-bottom: 6px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > div:first-child {
+    margin-bottom: 18px !important;
+  }
+
+  body[data-page="product"] main h1 {
+    margin-bottom: 24px !important;
+  }
+
+  body[data-page="product"] main h1 + p {
+    margin-bottom: 32px !important;
+  }
+
+  body[data-page="product"] main h1 + p + div {
+    margin-bottom: 14px !important;
+  }
+
+  body[data-page="product"] main h1 + p + div + p {
+    margin-bottom: 12px !important;
+  }
+
+  body[data-page="product"] main h1 + p + div + p + p {
+    margin-bottom: 34px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap {
+    gap: 16px !important;
+    margin-bottom: 20px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap > label {
+    gap: 10px !important;
+    margin-bottom: 2px !important;
+  }
+
+  body[data-page="product"] #productQty,
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap > .store-button,
+  body[data-page="product"] main .space-y-6 > a.store-button.secondary {
+    min-height: 58px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap > .store-button {
+    padding: 16px 16px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > a.store-button.secondary {
+    margin-top: 4px !important;
+    margin-bottom: 36px !important;
+    padding: 16px 20px !important;
+  }
+
+  body[data-page="product"] main .grid.grid-cols-3.gap-3 {
+    margin-top: 4px !important;
+    margin-bottom: 32px !important;
+    padding-top: 24px !important;
+  }
+
+  body[data-page="product"] main .grid.grid-cols-3.gap-3 > span {
+    min-height: 56px !important;
+    padding: 14px 0 !important;
+    gap: 14px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > a.text-brand-accent {
+    margin-top: 2px !important;
+    padding: 10px 0 !important;
+  }
+
+  body[data-page="product"] .product-details {
+    margin-top: 54px !important;
+    padding: 24px !important;
+  }
+
+  body[data-page="product"] .detail-tabs {
+    gap: 12px !important;
+    padding-bottom: 20px !important;
+    margin-bottom: 4px !important;
+  }
+
+  body[data-page="product"] .detail-tabs button {
+    min-height: 52px !important;
+    padding: 13px 15px !important;
+  }
+
+  body[data-page="product"] .product-details [role="tabpanel"] {
+    padding-top: 28px !important;
+  }
+
+  body[data-page="product"] .product-details dl {
+    row-gap: 18px !important;
+    column-gap: 16px !important;
+  }
+
+  body[data-page="product"] .product-details :is(dt, dd) {
+    padding-block: 7px !important;
+  }
+
+  body[data-page="product"] .product-details + section {
+    margin-top: 64px !important;
+  }
+
+  body[data-page="product"] .product-details + section > h2,
+  body[data-page="product"] #recentProducts > h2 {
+    margin-bottom: 28px !important;
+  }
+
+  body[data-page="product"] #recentProducts {
+    margin-top: 60px !important;
+  }
+
+  body[data-page="product"] #recentProducts .store-product-grid,
+  body[data-page="product"] .product-details + section .store-product-grid {
+    gap: 26px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-page="product"] main > section > .max-w-7xl > .grid {
+    gap: 38px !important;
+  }
+
+  body[data-page="product"] main h1 {
+    margin-bottom: 22px !important;
+  }
+
+  body[data-page="product"] main h1 + p {
+    margin-bottom: 30px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap {
+    gap: 18px !important;
+  }
+
+  body[data-page="product"] .product-details {
+    margin-top: 50px !important;
+    padding: 20px !important;
+  }
+
+  body[data-page="product"] .detail-tabs {
+    gap: 10px !important;
+  }
+}
