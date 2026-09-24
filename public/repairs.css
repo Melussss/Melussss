@@ -5689,3 +5689,231 @@ img {
     gap: 16px;
   }
 }
+
+/* Product detail mobile breathing room — 2026-09-24 */
+@media (max-width: 767px) {
+  body[data-page="product"] main > section {
+    padding-top: 108px !important;
+    padding-bottom: 56px !important;
+  }
+
+  body[data-page="product"] main > section > .max-w-7xl {
+    padding-inline: 18px !important;
+  }
+
+  body[data-page="product"] main nav[aria-label="Breadcrumb"] {
+    margin-bottom: 24px !important;
+    gap: 7px 10px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.55 !important;
+  }
+
+  body[data-page="product"] main > section > .max-w-7xl > .grid {
+    gap: 32px !important;
+  }
+
+  body[data-page="product"] #main-gallery {
+    border-radius: 20px !important;
+  }
+
+  body[data-page="product"] #main-gallery img {
+    padding: 22px !important;
+  }
+
+  body[data-page="product"] #main-gallery > span {
+    right: 12px !important;
+    bottom: 12px !important;
+    padding: 7px 10px !important;
+    font-size: 0.75rem !important;
+  }
+
+  body[data-page="product"] main .space-y-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 0 !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > div:first-child {
+    margin-bottom: 12px !important;
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  body[data-page="product"] main h1 {
+    margin-bottom: 16px !important;
+    font-size: clamp(1.8rem, 8vw, 2.35rem) !important;
+    line-height: 1.16 !important;
+    overflow-wrap: anywhere;
+  }
+
+  body[data-page="product"] main h1 + p {
+    margin-bottom: 22px !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+  }
+
+  body[data-page="product"] main h1 + p + div {
+    margin-bottom: 8px !important;
+    font-size: 2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  body[data-page="product"] main h1 + p + div + p {
+    margin-bottom: 7px !important;
+    color: #9ca3af;
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+  }
+
+  body[data-page="product"] main h1 + p + div + p + p {
+    margin-bottom: 24px !important;
+    font-size: 0.95rem !important;
+    font-weight: 700;
+    line-height: 1.5 !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px !important;
+    width: 100%;
+    margin-bottom: 12px !important;
+    align-items: stretch !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap > label {
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    flex-basis: auto !important;
+    gap: 7px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  body[data-page="product"] #productQty {
+    width: 100% !important;
+    min-height: 52px !important;
+    margin-top: 0 !important;
+    font-size: 1rem;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap > .store-button {
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 13px 14px !important;
+    line-height: 1.25 !important;
+    white-space: normal;
+  }
+
+  body[data-page="product"] main .space-y-6 > a.store-button.secondary {
+    width: 100%;
+    min-height: 52px;
+    margin-bottom: 24px !important;
+    padding: 13px 18px !important;
+  }
+
+  body[data-page="product"] main .grid.grid-cols-3.gap-3 {
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    width: 100%;
+    margin-bottom: 20px !important;
+    padding-top: 18px !important;
+  }
+
+  body[data-page="product"] main .grid.grid-cols-3.gap-3 > span {
+    min-height: 44px;
+    padding: 10px 0;
+    gap: 11px !important;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    align-items: center !important;
+    font-size: 0.92rem;
+    line-height: 1.4 !important;
+  }
+
+  body[data-page="product"] main .grid.grid-cols-3.gap-3 > span:last-child {
+    border-bottom: 0;
+  }
+
+  body[data-page="product"] main .space-y-6 > a.text-brand-accent {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+    gap: 9px;
+    padding: 4px 0;
+    line-height: 1.5;
+  }
+
+  body[data-page="product"] .product-details {
+    margin-top: 38px !important;
+    padding: 18px !important;
+    border-radius: 18px !important;
+  }
+
+  body[data-page="product"] .detail-tabs {
+    gap: 8px !important;
+    padding-bottom: 14px !important;
+  }
+
+  body[data-page="product"] .detail-tabs button {
+    min-height: 48px !important;
+    padding: 11px 12px !important;
+    font-size: 0.9rem;
+    line-height: 1.3 !important;
+  }
+
+  body[data-page="product"] .product-details [role="tabpanel"] {
+    padding-top: 20px !important;
+    line-height: 1.7;
+  }
+
+  body[data-page="product"] .product-details dl {
+    gap: 12px 14px !important;
+  }
+
+  body[data-page="product"] .product-details :is(dt, dd) {
+    padding-block: 4px;
+    line-height: 1.5 !important;
+    overflow-wrap: anywhere;
+  }
+
+  body[data-page="product"] .product-details + section {
+    margin-top: 48px !important;
+  }
+
+  body[data-page="product"] .product-details + section > h2,
+  body[data-page="product"] #recentProducts > h2 {
+    margin-bottom: 20px !important;
+    font-size: 1.55rem !important;
+    line-height: 1.25 !important;
+  }
+
+  body[data-page="product"] #recentProducts {
+    margin-top: 44px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body[data-page="product"] main > section > .max-w-7xl {
+    padding-inline: 14px !important;
+  }
+
+  body[data-page="product"] main .space-y-6 > .flex.gap-3.flex-wrap {
+    grid-template-columns: 1fr !important;
+  }
+
+  body[data-page="product"] .product-details {
+    padding: 15px !important;
+  }
+
+  body[data-page="product"] .product-details dl {
+    grid-template-columns: minmax(88px, .42fr) minmax(0, 1fr) !important;
+  }
+}
