@@ -16,4 +16,4 @@
   ]
 }
 
-  
+// Add SEARCHAPI_KEY as a Cloudflare Worker secret (do not commit the key).
