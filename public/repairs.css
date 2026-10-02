@@ -6415,11 +6415,5 @@ body[data-page="product"] .product-section-heading > a { display: inline-flex; a
 }
 
 /* Best Buy catalog attribution */
-.bestbuy-api-attribution{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap;margin-top:1rem;padding:.75rem .9rem;border:1px solid rgba(255,255,255,.09);border-radius:12px;background:rgba(255,255,255,.025);font-size:.78rem;color:#9ca3af}
-.bestbuy-api-attribution a{display:inline-flex;align-items:center;gap:.55rem;color:#dbeafe;text-decoration:none;font-weight:600}
-.bestbuy-api-attribution a:hover{text-decoration:underline}
-.bestbuy-api-attribution img{width:38px;height:auto;display:block;object-fit:contain;background:#fff;border-radius:4px;padding:2px}
-.bestbuy-api-attribution-search{margin:1rem 0 .25rem}
-.catalog-result-copy .catalog-attribution{margin-top:.8rem;font-size:.72rem;color:#8b93a1}
-.catalog-result-copy .catalog-attribution a{color:#93c5fd}
-@media(max-width:767px){.bestbuy-api-attribution{align-items:flex-start}.bestbuy-api-attribution img{width:34px}}
+
+.catalog-data-note{margin-top:1rem;padding:.8rem .95rem;border:1px solid rgba(255,255,255,.09);border-radius:12px;background:rgba(255,255,255,.025);font-size:.78rem;line-height:1.5;color:#9ca3af}.catalog-data-note-search{margin:1rem 0 .25rem}.catalog-reference-price{margin:0 0 .35rem;color:#aeb7c5;font-size:.86rem}
