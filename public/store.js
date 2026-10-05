@@ -3,7 +3,7 @@
  'use strict';
  const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
  const escape=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const money=c=>'AED '+(c/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+ const money=c=>(c/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
  const priceText=p=>p.price_cents>0?money(p.price_cents):'Contact for price';
  let state={items:[],wishlist:[],recent:[],subtotal:0,tax:0,shipping:0,total:0},catalog=[],ready=false;
  let toastTimer;function toast(message){const el=$('#dcToast');el.textContent=message;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.hidden=true,5000);}
