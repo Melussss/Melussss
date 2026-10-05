@@ -6401,3 +6401,57 @@ body[data-page="shop"] .product-card-price-button:focus-visible {
     margin-top: -5px;
   }
 }
+
+/* ========================================================================== 
+   PC builder — desktop column containment fix
+   Keeps the part carousels and Build Summary in separate grid columns.
+   Mobile/tablet layout is intentionally unchanged.
+   ========================================================================== */
+@media (min-width: 1024px) {
+  #builder .builder-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 360px) !important;
+    align-items: start !important;
+    gap: 30px !important;
+  }
+
+  #builder .builder-component-stack,
+  #builder .builder-summary-column {
+    grid-column: auto !important;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #builder .builder-component-stack {
+    overflow: hidden;
+  }
+
+  #builder .component-category {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  #builder .builder-track {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: visible;
+  }
+
+  #builder .builder-summary-column {
+    align-self: start;
+  }
+
+  #builder .builder-summary-card {
+    position: relative !important;
+    top: auto !important;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    max-width: 360px;
+    margin-left: auto;
+  }
+}
