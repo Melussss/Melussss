@@ -6375,3 +6375,29 @@ body[data-page="product"] .product-section-heading > a { display: inline-flex; a
   body[data-page="product"] .product-stock-badge { align-self: flex-start; }
   body[data-page="product"] .product-gallery-note { justify-content: flex-start; }
 }
+
+/* Product cards: contact-price products use an inline CTA, not the hover Quick Add overlay. */
+body[data-page="shop"] .product-card-price-button {
+  width: 100%;
+  min-height: 44px;
+  margin: -7px 0 17px;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #17181a !important;
+  justify-content: center;
+  text-align: center;
+}
+
+body[data-page="shop"] .product-card-price-button:hover,
+body[data-page="shop"] .product-card-price-button:focus-visible {
+  background: #e7e7e8 !important;
+  border-color: #e7e7e8 !important;
+  color: #17181a !important;
+}
+
+@media (max-width: 700px) {
+  body[data-page="shop"] .product-card-price-button {
+    min-height: 46px;
+    margin-top: -5px;
+  }
+}
