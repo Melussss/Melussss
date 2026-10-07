@@ -6,7 +6,7 @@ export default {
   const url=new URL(request.url);
   if(url.pathname==='/index.html')return Response.redirect(new URL('/',url),301);
   if(url.pathname==='/robots.txt')return new Response(robots(url.origin),{headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=3600'}});
-  if(url.pathname==='/sitemap.xml')return new Response(sitemap(url.origin),{headers:{'Content-Type':'application/xml; charset=utf-8','Cache-Control':'public, max-age=3600','X-Content-Type-Options':'nosniff'}});
+  if(url.pathname==='/sitemap.xml')return env.ASSETS.fetch(request);
   if(url.pathname.startsWith('/images/')||url.pathname.startsWith('/videos/')||['/styles.css','/repairs.css','/store.js','/robots.txt','/favicon.ico'].includes(url.pathname))return env.ASSETS.fetch(request);
   const headers=new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin','X-Frame-Options':'DENY','Permissions-Policy':'camera=(), microphone=(), geolocation=()'});
   try{
